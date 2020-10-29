@@ -1,5 +1,13 @@
 <?php 
 
+session_start();
+if ($_SESSION['admin']== "") {
+    header("location:index.php");
+}
+?>
+
+<?php 
+
     include('config.php');
     $id = $_REQUEST['id'];
     echo $id;

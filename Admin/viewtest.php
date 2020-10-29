@@ -1,6 +1,12 @@
-<?php
+<?php 
 
-    session_start();
+session_start();
+if ($_SESSION['admin']== "") {
+    header("location:index.php");
+}
+?>
+
+<?php
     include('header.php');
     include('config.php');
 ?>

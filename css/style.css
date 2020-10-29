@@ -1,0 +1,43 @@
+#signup-form label{
+    display: block;
+}
+#error li{
+    color: red;
+}
+#signup-form a, #login-form a,input[type="submit"]{
+    text-decoration: none;
+    background-color: rgb(163, 42, 72);
+    padding: 4px;
+    color:yellow;
+    border: 1px solid black;
+}
+
+input[type="text"] ,input[type="password"], input[type="email"]{
+    border:2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#signup-form table , #login-form table{
+    margin: 100px;
+    background:linear-gradient(to right,rgba(221, 208, 22, 0.856),rgb(163, 42, 72));
+    text-align: center;  
+}
+#signup-form table td , #login-form table td{
+    border:1px solid black;
+    padding:15px;
+}
+
+.header{
+    width: auto;
+    background-color: red;
+    font-size: 80px;
+    padding-left:380px;
+}
+
+#footer{
+    width: auto;
+    background-color: red;
+    padding-left:80px;
+}
+

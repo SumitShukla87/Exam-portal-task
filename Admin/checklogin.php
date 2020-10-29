@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $_SESSION['admin'] = $row['name'];
-            header('location:login.php');
+            header('location:dashboard.php');
         } 
     } else {
         echo "Login failed!!!!!!!!!!!";

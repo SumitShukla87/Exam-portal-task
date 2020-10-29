@@ -1,6 +1,13 @@
+<?php 
+
+session_start();
+if ($_SESSION['admin']== "") {
+    header("location:index.php");
+}
+?>
+
 <?php
     include('header.php');
-    session_start();
     include('config.php');
 ?>
    <?php $sql = "SELECT * from topic";
