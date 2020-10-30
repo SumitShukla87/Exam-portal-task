@@ -13,7 +13,7 @@ $errors = array();
 $id = $_REQUEST['id'];
 
 ?>
-     <div id="update">       
+    <div class="main">      
         <form action="updatetest.php"  method="POST">
         <?php 
 

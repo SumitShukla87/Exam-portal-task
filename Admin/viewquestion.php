@@ -11,6 +11,7 @@ if ($_SESSION['admin']== "") {
     include('config.php');
     include('header.php');
 ?>
+<div class="main">
  <?php include('nav.php'); ?>
    <?php $sql = "SELECT * from question";
 
@@ -38,4 +39,5 @@ if ($_SESSION['admin']== "") {
     } 
     echo"</table>";
     ?>
+</div>    
 <?php include('footer.php'); ?>

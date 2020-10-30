@@ -10,7 +10,9 @@ if ($_SESSION['admin']== "") {
     include('header.php');
     include('config.php');
 ?>
+<div class="main"> 
  <?php include('nav.php'); ?>
+
    <?php $sql = "SELECT * from topic";
 
         echo "<table>";
@@ -37,4 +39,5 @@ if ($_SESSION['admin']== "") {
     } 
     echo"</table>";
     ?>
+</div>    
 <?php include ('footer.php') ?>

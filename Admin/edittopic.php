@@ -14,7 +14,7 @@ $id = $_REQUEST['id'];
 
 ?>
 
-     <div id="update">       
+<div class="main">     
         <form action="updatetopic.php"  method="POST">
         <?php 
 
@@ -47,5 +47,5 @@ $id = $_REQUEST['id'];
         }            
         ?>        
         </form>
-    </div>
+</div>
  <?php include('footer.php') ?>

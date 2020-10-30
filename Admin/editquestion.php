@@ -13,7 +13,7 @@ $id = $_REQUEST['id'];
 
 ?>
 
-    <div id="edit">       
+<div class="main">     
         <form action="updatequestion.php"  method="POST">
         <?php 
 

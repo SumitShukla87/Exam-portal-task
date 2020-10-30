@@ -37,16 +37,17 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
- <?php include('nav.php'); ?>
-    <div id="error">
-        <?php if(sizeof($errors) > 0) : ?>
-            <?php foreach($errors as $error):?>
-                <?php echo'<script>alert("'.$error['msg'].'")</script>'?> 
-            <?php endforeach?> 
-        <?php endif; ?>
-        
-    </div>
-    <div id="mainform">
+<div class="main">
+    <?php include('nav.php'); ?>
+        <div id="error">
+            <?php if(sizeof($errors) > 0) : ?>
+                <?php foreach($errors as $error):?>
+                    <?php echo'<script>alert("'.$error['msg'].'")</script>'?> 
+                <?php endforeach?> 
+            <?php endif; ?>
+            
+        </div>
+    
     
         <form action="" name="testform" method="POST" onSubmit="return check();">
             <table>

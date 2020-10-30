@@ -9,11 +9,10 @@ if ($_SESSION['admin']== "") {
 
         <?php include('nav.php'); ?>
     <div id="adminbg">    
-        <div id="mainform">
+        <div class="main">
             <form action="" method="POST">
-                <h2 id="wel">Welcome" <?php echo$_SESSION['admin'];?> "to Admin Panel</h2>
+              <marquee>  <h2 id="wel">Welcome" <?php echo$_SESSION['admin'];?> "to Admin Panel</h2></marquee>
                 <!-- <input type="Submit" name="submit" value="Logout"> -->
-                <a href="logout.php" >Logout</a>
             </form>
         </div> 
     <div>    
