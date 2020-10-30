@@ -32,4 +32,5 @@
 
         ?>
     </div>    
+    <a href="logout.php">Logout</a>
 <?php include ('footer.php'); ?>

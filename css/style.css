@@ -42,3 +42,27 @@ input[type="text"] ,input[type="password"], input[type="email"]{
     padding-left:80px;
 }
 
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    
+  
+  }
+  li{
+      float: left;
+  }
+
+  
+  li a {
+    background-color: Orange;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: green;
+  }
+
+
