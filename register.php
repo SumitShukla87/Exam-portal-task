@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
 
         if ($conn->query($sql) === true) {
 
-                       echo "New record created successfully";
+                       echo "<script>alert('New User Registerd Successfully!!')</script>";
                      
         } else {
                     $errors[] = array('input'=>'form','msg'=>$conn->error);
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
                     <tr>
                         <td colspan="2"><h2>Sign Up</h2></td>
                     </tr>
-                    <form action="index.php" method="POST">
+                    <form action="" method="POST">
                 
                             <tr>
                                 <td><label for="username">Username:</td><td> <input type="text" name="username" required></label></td>
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
                                 <td><label for="email">Email:</td><td> <input type="email" name="email" required></label></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" name="submit" value="Submit"></td>
+                                <td><input type="submit" name="submit" value="Register"></td>
                                 <td><a href="index.php">Log In</a></td>
                             </tr>
                     </form>  

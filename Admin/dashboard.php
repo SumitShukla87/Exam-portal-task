@@ -8,11 +8,12 @@ if ($_SESSION['admin']== "") {
 ?>
 
         <?php include('nav.php'); ?>
-    <div id="adminbg">    
-        <div class="main">
+        
+    <div class="main">
+        <div id="admin-bg">
+            <h1>Hello</h1>
             <form action="" method="POST">
               <marquee>  <h2 id="wel">Welcome" <?php echo$_SESSION['admin'];?> "to Admin Panel</h2></marquee>
-                <!-- <input type="Submit" name="submit" value="Logout"> -->
             </form>
         </div> 
     <div>    

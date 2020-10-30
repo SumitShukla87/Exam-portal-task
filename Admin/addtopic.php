@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
         </div>
     
         <form action="" name="topicpage" method="POST" onSubmit="return checkvalidation();">
-            <table>
+            <table class="add-table-css">
                 <tr>
                     <td><label for="Subject">Enter Topic:</label></td>
                     <td><input type="text" name="topic" placeholder="Enter Topic Name"></td>

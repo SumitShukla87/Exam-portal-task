@@ -11,6 +11,6 @@
      
     <div id="wrapper">
         <div>
-            <p class="header" >Online Exam Portal<p>
+            <img src="images/header.jpg" class="header">
         <div>
 

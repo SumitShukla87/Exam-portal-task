@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
     
     
         <form action="" name="testform" method="POST" onSubmit="return check();">
-            <table>
+            <table class="add-table-css">
                 <tr>
                     <td><label for="Subject">Choose Topic:</label></td>
                     <td>

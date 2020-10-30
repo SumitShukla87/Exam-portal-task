@@ -1,25 +1,38 @@
-.main{
-
-  height: 400px;
-}
-table{
-    margin-left: 50px;
-    margin-top: 100px;
-    text-align: center;
-}
-
 .header{
-    width: auto;
-    background-color: red;
-    font-size: 80px;
-    padding-left:380px;
+  width: 100%;
+  height: 250px;
+
+}
+#admin-index-table{
+  text-align: center;
+  margin-left: 300px;
+  background:linear-gradient(to right,rgba(22, 221, 205, 0.856),rgb(175, 42, 75));
+  text-align: center;  
+  width: 700px;
 }
 
-#footer{
-    width: auto;
-    background-color: red;
-    padding-left:80px;
+#admin-index-table td{
+  border:1px solid black;
+  padding:15px;
 }
+input[type="text"] ,input[type="password"] , select{
+  width: 300px;
+  border:2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+input[type="submit"]{
+  text-decoration: none;
+  background-color: rgb(163, 42, 72);
+  padding: 4px;
+  color:rgba(255, 255, 255, 0.89);
+  border: 1px solid black;
+}
+#admin-marquee{
+  color: rgb(26, 157, 167);
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -45,12 +58,61 @@ ul {
     background-color: green;
   }
 
+.add-table-css{
+  width: 100%;
+  border: 2px solid black;
+  text-align: center;
+  background:linear-gradient(to right,rgba(201, 221, 22, 0.856),rgb(66, 42, 175));
+  font-size: large;
+}
+.add-table-css td{
 
-#adminbg{
+  color: black;
+  border-top: 2px solid gray;
+  width: 500px;
+}
 
-    background-image: url("images/welcome.jpg");
 
-}  
+.view-table-css{
+  width: 100%;
+  border: 2px solid black;
+  text-align: center;
+  /* background:linear-gradient(to right,rgb(201, 147, 0),rgb(94, 165, 27)); */
+  
+  background:linear-gradient(to right,rgba(22, 221, 205, 0.856),rgb(175, 42, 75));
+  font-size: large;
 
+}
+.view-table-css-td{
+
+  color: black;
+  border-bottom: 2px solid gray;
+  width: 500px;
+  height: 50px;
+}
+.anchor-css {
+  display: block;
+  color: rgb(253, 241, 241);
+  background-color:rgb(185, 36, 36);
+  text-decoration: none;
+  width: 100px;
+  margin-left: 150px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.anchor-css:hover {
+  background-color: rgb(24, 185, 185);
+}
+#footer{
+  width: auto;
+  background-color:rgba(20, 202, 141, 0.856);
+  padding-left:80px;
+}
+#admin-bg{
+  background-image: url("../images/welcome.jpg");
+  background-repeat: no-repeat;
+  height: 300px;
+  width: justify;
+}
 
   

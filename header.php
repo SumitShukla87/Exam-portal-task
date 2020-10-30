@@ -8,4 +8,6 @@
     </head>
     <body>        
         <div id="wrapper">
-        <p class="header" >Online Exam Portal<p>
+        <div>
+            <img src="admin/images/header.jpg" class="header">
+        <div>

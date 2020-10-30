@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     
 
         <form action="" name="queform" method="POST" onSubmit="return checkall();">
-            <table>
+            <table class="add-table-css">
                 <tr>
                     <td><label for="Test">Choose Test:</label></td>
                     <td>
@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
                 </tr>
                 <tr>
                     <td><input type="submit" name="submit" value="Add Question"></td>
-                    <td><a href="viewquestion.php">View Question</a></td>
+                    <td><a href="viewquestion.php" class="anchor-css">View Question</a></td>
                 </tr>
             </table>   
          
