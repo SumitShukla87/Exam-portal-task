@@ -10,7 +10,7 @@ if ($_SESSION['admin']== "") {
     include('header.php');
     include('config.php');
 ?>
-
+ <?php include('nav.php'); ?>
    <?php $sql = "SELECT * from test";
 
         echo "<table>";

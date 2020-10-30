@@ -1,0 +1,24 @@
+<?php 
+
+session_start();
+if ($_SESSION['admin']== "") {
+    header("location:index.php");
+}
+?>
+<?php 
+
+    include('config.php');
+    $id = $_REQUEST['id'];
+    echo $id;
+
+    $sql = "DELETE FROM user where`user_id`='".$id."'";
+
+if ($conn->query($sql) == true) {
+
+        header("location:viewuser.php");
+      
+} else {
+        echo $conn->error;
+}
+
+?>

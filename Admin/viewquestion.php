@@ -7,11 +7,11 @@ if ($_SESSION['admin']== "") {
 ?>
 <?php
 
-    session_start();
+
     include('config.php');
     include('header.php');
 ?>
-
+ <?php include('nav.php'); ?>
    <?php $sql = "SELECT * from question";
 
         echo "<table>";

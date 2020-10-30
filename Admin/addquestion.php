@@ -45,6 +45,7 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+ <?php include('nav.php'); ?>
    
     <div id="error">
 

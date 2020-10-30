@@ -53,6 +53,7 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+ <?php include('nav.php'); ?>
     <div id="error">
         <?php if(sizeof($errors) > 0) : ?>
             <?php foreach($errors as $error):?>
