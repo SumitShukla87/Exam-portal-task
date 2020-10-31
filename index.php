@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $_SESSION['user'] = $row['name'];
+                $_SESSION['session_id'] = uniqid();
                 header('location:user-dashboard.php');
             } 
         } else {
