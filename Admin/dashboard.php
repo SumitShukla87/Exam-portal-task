@@ -11,7 +11,6 @@ if ($_SESSION['admin']== "") {
         
     <div class="main">
         <div id="admin-bg">
-            <h1>Hello</h1>
             <form action="" method="POST">
               <marquee>  <h2 id="wel">Welcome" <?php echo$_SESSION['admin'];?> "to Admin Panel</h2></marquee>
             </form>

@@ -105,7 +105,7 @@
                 </table>
 
                 <h2 class="showtopic">Please Final submit Before Logout</h1>
-                <a href="logout" class="anchor-css">Log Out</a>
+                <a href="logout.php" class="anchor-css">Log Out</a>
         </form>
 
 
