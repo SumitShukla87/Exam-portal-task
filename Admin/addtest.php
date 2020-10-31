@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
                 </tr>
                 <tr>
                     <td><input type="submit"  name="submit" value="Add Test"></td>
-                    <td><a href="viewtest.php">View all Test</a></td>
+                    <td><a href="viewtest.php" class="anchor-css">View all Exam</a></td>
                 </tr>
             </table>    
         </form>
