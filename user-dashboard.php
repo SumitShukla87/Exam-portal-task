@@ -12,6 +12,7 @@
 
     <div class="main">    
         <marquee><h3 id="user-marquee">Welcome  <?php echo $_SESSION['user']?> to User Dash Board</h3></marquee>
+       
         <?php 
             echo"<h1 class='showtopic'>Select Topic to give Exam</h1>";
 
@@ -31,6 +32,7 @@
         echo"</table>";
 
         ?>
+         <a href="logout.php" class="anchor-css">Log Out</a>
     </div>    
 
 <?php include ('footer.php'); ?>
