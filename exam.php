@@ -64,87 +64,74 @@ $id = $_REQUEST['id'];
 if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {?>
+<div class="main">
 
-<form action="exam.php?page=<?php echo $page+1;?>&id=<?php echo $id; ?> " method="POST">
-            <div id="question">
-                <h2> Question <?php echo $page;?>: <?php echo $row['que_name'];?></h2>
-                <input type="hidden" value="<?php echo $row['que_name'];?>" name="question">
-                <input type="hidden" value="<?php echo $row['test_id'];?>" name="test_id">
-                <input type="hidden" value="<?php echo $_SESSION['session_id'];?>" name="session_id">
-            </div>
-            <div id="radio">
+        <form action="exam.php?page=<?php echo $page+1;?>&id=<?php echo $id; ?> " method="POST">
+                    <div id="question">
+                        <h2> Question <?php echo $page;?>: <?php echo $row['que_name'];?></h2>
+                        <input type="hidden" value="<?php echo $row['que_name'];?>" name="question">
+                        <input type="hidden" value="<?php echo $row['test_id'];?>" name="test_id">
+                        <input type="hidden" value="<?php echo $_SESSION['session_id'];?>" name="session_id">
+                    </div>
+                    <div id="radio">
 
-            <?php
-        
-                $sql2 = "SELECT * FROM answer WHERE `session_id`='".$_SESSION['session_id']."'&& `q_name`='".$row['que_name']."'";
-                $result2 = $conn->query($sql2);
+                    <?php
+                
+                        $sql2 = "SELECT * FROM answer WHERE `session_id`='".$_SESSION['session_id']."'&& `q_name`='".$row['que_name']."'";
+                        $result2 = $conn->query($sql2);
 
-                if ($result2->num_rows > 0) {
-                    // output data of each row
-                    while ($row2 = $result2->fetch_assoc()) {
+                        if ($result2->num_rows > 0) {
+                            // output data of each row
+                            while ($row2 = $result2->fetch_assoc()) {
+                                
+                                $user_answer = $row2['given_ans'];
+                                $que = $row2['q_name'];
+                                
+                            }
+                        } else {
+
+                            echo $conn->error;
+                        }
+                
+                    ?>
                         
-                        $user_answer = $row2['given_ans'];
-                        $que = $row2['q_name'];
+                            <input type="radio" name="option"  value="1" <?php if ($user_answer==1) :?> checked
+                        <?php endif ?>><?php echo $row['ans1']; ?><br>
                         
-                    }
-                } else {
+                            <input type="hidden" value="<?php echo $row['ans1'] ?>" name="ans1">
+                    
+                            <input type="radio" name="option"  value="2" <?php if ($user_answer==2) :?> checked
+                        <?php endif ?>> <?php echo $row['ans2']; ?> <br>
+                    
+                            <input type="hidden" value="<?php echo $row['ans2']; ?>" name="ans2">
+                    
+                            <input type="radio" name="option"  value="3" <?php if ($user_answer==3) :?> checked
+                        <?php endif ?>><?php echo $row['ans3']; ?><br>
 
-                    echo $conn->error;
+                            <input type="hidden" value="<?php echo $row['ans3'] ?>" name="ans3">
+                    
+                            <input type="radio" name="option"  value="4" <?php if ($user_answer==4) :?> checked
+                        <?php endif ?>><?php echo $row['ans4'] ?><br>
+                    
+                            <input type="hidden" value="<?php echo $row['ans4'] ?>" name="ans4">
+                            <input type="hidden" value="<?php echo $row['true_ans'] ?>" name="true_ans">
+                        <?php if ($page>=1 && $page!=$all_page) :?>
+                            <input type="submit" name="ans" value="Next">
+                        <?php endif ;?>
+
+                        <?php if ($page == $all_page) :?>
+                        <input type="submit" name="ans" value="Submit Answer">
+                        <?php endif ;?>
+                        
+            
+                                    </div>
+                </form>
+                <?php
                 }
-        
-            ?>
-                
-                    <input type="radio" name="option"  value="1" <?php if ($user_answer==1) :?> checked
-                   <?php endif ?>><?php echo $row['ans1']; ?><br>
-                
-                    <input type="hidden" value="<?php echo $row['ans1'] ?>" name="ans1">
-             
-                    <input type="radio" name="option"  value="2" <?php if ($user_answer==2) :?> checked
-                   <?php endif ?>> <?php echo $row['ans2']; ?> <br>
-              
-                    <input type="hidden" value="<?php echo $row['ans2']; ?>" name="ans2">
-              
-                    <input type="radio" name="option"  value="3" <?php if ($user_answer==3) :?> checked
-                   <?php endif ?>><?php echo $row['ans3']; ?><br>
-
-                    <input type="hidden" value="<?php echo $row['ans3'] ?>" name="ans3">
-              
-                    <input type="radio" name="option"  value="4" <?php if ($user_answer==4) :?> checked
-                   <?php endif ?>><?php echo $row['ans4'] ?><br>
+            }?>
             
-                    <input type="hidden" value="<?php echo $row['ans4'] ?>" name="ans4">
-                    <input type="hidden" value="<?php echo $row['true_ans'] ?>" name="true_ans">
-                <?php if ($page>=1 && $page!=$all_page) :?>
-                    <input type="submit" name="ans" value="Next">
-                <?php endif ;?>
-
-                <?php if ($page == $all_page) :?>
-                <input type="submit" name="ans" value="Submit Answer">
-                <?php endif ;?>
-                
-       
-                            </div>
-        </form>
-        <?php
-        }
-    }?>
-
- 
-
-
-    
-    
-        
-        
-         
-
-           
-
-            
-
-       
-
-
+</div>
+<?php include 'footer.php'?>
 <?php
 
 if (isset($_POST['ans'])) {

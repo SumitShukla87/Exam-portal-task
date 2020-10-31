@@ -3,6 +3,16 @@
     height: 250px;
   
   }
+.main{
+  height: 330px;
+} 
+.showtopic {
+  color: rgb(196, 29, 29);
+  margin-left: 400px;
+}
+#user-marquee{
+  color: rgb(26, 157, 167);
+}
 #signup-form label{
     display: block;
 }
@@ -20,15 +30,8 @@ input[type="text"] ,input[type="password"], input[type="email"]{
     padding: 10px;
 }
 
-#signup-form table , #login-form table{
-    margin: 100px;
-    background:linear-gradient(to right,rgba(221, 208, 22, 0.856),rgb(163, 42, 72));
-    text-align: center;  
-}
-#signup-form table td , #login-form table td{
-    border:1px solid black;
-    padding:15px;
-}    
+
+  
 
 ul {
     list-style-type: none;
@@ -57,4 +60,58 @@ ul {
     background-color:rgba(20, 202, 141, 0.856);
     padding-left:80px;
   }
+  .view-table-css{
+    width: 100%;
+    border: 2px solid black;
+    text-align: center;
+    /* background:linear-gradient(to right,rgb(201, 147, 0),rgb(94, 165, 27)); */
+    
+    background:linear-gradient(to right,rgba(22, 221, 205, 0.856),rgb(175, 42, 75));
+    font-size: large;
+  
+  }
+  .view-table-css-td {
+  
+    color: black;
+    border-bottom: 2px solid gray;
+    width: 500px;
+    height: 50px;
+  }
 
+  .show-table-css{
+    width: 100%;
+    border: 2px solid black;
+    text-align: center;
+    background:linear-gradient(to right,rgba(201, 221, 22, 0.856),rgb(66, 42, 175));
+    font-size: large;
+  }
+  .show-table-css td{
+  
+    color: black;
+    border-top: 2px solid gray;
+    width: 500px;
+  }
+
+  .user-index-table{
+    text-align: center;
+    margin-left: 300px;
+    background:linear-gradient(to right,rgba(22, 221, 205, 0.856),rgb(175, 42, 75));
+    text-align: center;  
+    width: 700px;
+  }
+  
+  .user-index-table td{
+    border:1px solid black;
+    padding:15px;
+  }
+
+  .anchor-css {
+    text-decoration: none;    
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .anchor-css:hover {
+    background-color: rgb(24, 185, 185);
+  }

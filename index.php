@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
 
-                <table>
+                <table class="user-index-table">
 
 
                     <form action="" method="POST" name="userindex" onSubmit="return checklogin();">
@@ -64,8 +64,9 @@ if (isset($_POST['submit'])) {
                             <td> <label for="password">Password: </td><td><input type="password" name="password"></label></td>
                         </tr>
                         <tr>
+                        <td><a href="register.php">New User? Register Here</a></td>
                             <td><input type="submit" name="submit" value="Login"></td>
-                            <td><a href="register.php">New User? Register Here</a></td>
+                           
                         </tr>
                     </form>          
                 </table>                
